@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.views.generic import DetailView, ListView
+from tester_app.models import Question
 
-# Create your views here.
+
+class QuestionListView(ListView):
+    model = Question
+
+
+class QuestionDetailView(DetailView):
+    model = Question
