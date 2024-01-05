@@ -26,4 +26,5 @@ class Answer(models.Model):
     """
     question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name='question')
     text = models.TextField(verbose_name='text')
+    is_right = models.BooleanField(default=True, verbose_name='is_answer_right')
 
