@@ -20,17 +20,10 @@ class Question(models.Model):
     theme = models.CharField(choices=Themes.choices, verbose_name='question_theme')
 
 
-class RightAnswer(models.Model):
+class Answer(models.Model):
     """
     about right answer
     """
-    question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name='ra_question')
-    text = models.TextField(verbose_name='ra_text')
+    question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name='question')
+    text = models.TextField(verbose_name='text')
 
-
-class WrongAnswer(models.Model):
-    """
-    about wrong answer
-    """
-    question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name='wa_question')
-    text = models.TextField(verbose_name='wa_text')
