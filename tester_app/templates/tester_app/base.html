@@ -1,0 +1,59 @@
+<load static>
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ToP</title>
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">YO</h5>
+        <nav class="ms-auto justify-content-end">
+            <a class="p-2 btn btn-outline-primary" href="#">New Question</a>
+            <a class="p-2 btn btn-outline-primary" href="#">Test yourself</a>
+            <a class="p-2 btn btn-outline-primary" href="#">Categories</a>
+        </nav>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <div class="container">
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    Theory of Programming
+                    <small class="d-block mb-3 text-muted">&copy; 2077</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Popular Themes</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Community</a></li>
+                        <li><a class="text-muted" href="#">Community's opinion</a></li>
+                        <li><a class="text-muted" href="#">Society's opinion</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Additional</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="https://easyoffer.ru/">Easyoffer</a></li>
+                        <li><a class="text-muted" href="https://www.youtube.com/">YouTube</a></li>
+                        <li><a class="text-muted" href="https://translate.google.ru/">Google translate</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About us</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Junior Python Developer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
+</load>
