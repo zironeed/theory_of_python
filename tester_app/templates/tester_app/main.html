@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'tester_app/base.html' %}
 
-</body>
-</html>
+{% block content %}
+<div class="container mt-5 pt-5">
+    <h1 style="color: blue; text-align: center;">THEORY OF PROGRAMMING</h1>
+
+
+    <div class="col-md-6 mx-auto">
+        <form action="">
+            <div class="form-group">
+                <label for="">Select Category</label>
+                <select name="category" id="" class="form-control">
+                    <option value="Choose">Choose</option>
+                    {% for category in catgories %}
+                    <option value="{{category.name}}">{{category.name}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button class="btn btn-outline-primary mt-3">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
