@@ -1,10 +1,15 @@
 from django.contrib import admin
-from tester_app.models import Question, Answer
+from tester_app.models import Question, Answer, Category
 
 
 class AnswerInline(admin.TabularInline):
     model = Answer
     extra = 1
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('name',)
 
 
 @admin.register(Question)
