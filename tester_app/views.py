@@ -1,4 +1,4 @@
-from django.views.generic import DetailView, ListView
+from django.views.generic import DetailView, ListView, CreateView
 from tester_app.models import Question
 
 
@@ -14,3 +14,4 @@ class QuestionListView(ListView):
 
 class QuestionDetailView(DetailView):
     model = Question
+    template_name = 'tester_app/question_detail.html'
