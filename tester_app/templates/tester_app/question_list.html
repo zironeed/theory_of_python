@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'tester_app/base.html' %}
 
-</body>
-</html>
+{% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <p class="lead">Question List</p>
+</div>
+
+<div class="row text-center">
+
+    {% for question in question_list %}
+
+    <div class="col-4">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">{{ question.text }}</h4>
+            </div>
+            <div class="card-body">
+                <a href="{% url 'tester_app:question_detail' question.pk %}"
+                   class="w-50 btn btn-lg btn-outline-primary">Read</a><p></p>
+                <a href="#"
+                   class="w-50 btn btn-lg btn-outline-primary">Edit</a><p></p>
+                <a href="#"
+                   class="w-50 btn btn-lg btn-outline-warning">Delete</a>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

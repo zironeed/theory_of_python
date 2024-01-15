@@ -1,0 +1,20 @@
+{% extends 'tester_app/base.html' %}
+
+{% block content %}
+<div class="col-12">
+    <div class="row text-center">
+        <p>
+        <h4 class="my-0 font-weight-normal">{{ question.text }}</h4>
+        <p>
+        <p>
+            {{ question.category }}
+        </p>
+        <p>
+            {% for answer in question.question_answer.all %}
+                {{ answer }} <p>
+            {% endfor %}
+        </p>
+    </div>
+</div>
+
+{% endblock %}
