@@ -21,7 +21,7 @@ class Question(models.Model):
     """
     text = models.TextField(max_length=200, unique=True, verbose_name='question_text')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='question_theme',
-                                 related_name='question_category', unique=False, blank=True)
+                                 related_name='question_category')
 
     def __str__(self):
         return self.text
