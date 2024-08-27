@@ -15,17 +15,3 @@ class Question(models.Model):
     class Meta:
         verbose_name = 'Question'
         verbose_name_plural = 'Questions'
-
-
-class Category(models.Model):
-    """
-    about question, too
-    """
-    name = models.CharField(max_length=200, unique=True, verbose_name='category_name')
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = 'Category'
-        verbose_name_plural = 'Categories'
